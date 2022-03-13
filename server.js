@@ -1,16 +1,10 @@
 var express = require('express');
 var cors = require('cors');
 require('dotenv').config()
-// const mongoose = require('mongoose')
 const multer  = require('multer')
 const upload = multer({ dest: 'uploads/'})
 
 var app = express();
-
-// Connect DB
-// const connectDB = (url) => {
-//   return mongoose.connect(url)
-// }
 
 // MIDDLEWARE
 
@@ -40,7 +34,6 @@ const port = process.env.PORT || 3000
 // Run App
 const start = () => {
   try {
-    // await connectDB(process.env.MONGO_URI)
     app.listen(port, () => 
       console.log(`Server is listening on port ${port}...`)
     )
